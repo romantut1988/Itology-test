@@ -98,6 +98,7 @@ body {
   background-color: #ffaf18;
   border: none;
   cursor: pointer;
+  text-align: center;
 }
 
 .header {
@@ -228,12 +229,13 @@ body {
   margin-right: 24px;
   box-shadow: 0px 3px 14px 1px rgb(152 152 152 / 20%);
   background-color: #ffffff;
-  padding: 26px 28px 15px 20px;
+  padding: 26px 20px 15px 20px;
 }
 
 .catalog__block {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100%;
 }
 
@@ -265,7 +267,10 @@ body {
 .catalog__block-btn {
   width: 242px;
   height: 50px;
-  background-color: #ffaf18;
+  font-size: 16px;
+  line-height: 55px;
+  font-weight: 700;
+  color: #020303;
 }
 
 .order {
@@ -298,11 +303,11 @@ body {
   color: #b99150;
   max-width: 369px;
 }
-
-.order__form {
-  max-width: 330px;
+.order__box {
   margin-top: 123px;
+  max-width: 330px;
 }
+
 .form__input {
   padding: 24px;
   font-size: 18px;
@@ -315,14 +320,58 @@ body {
 input[type="text"]::placeholder {
   color: #cba86e;
 }
+input[type="tel"]::placeholder {
+  color: #cba86e;
+}
 .order__form-btn {
   width: 100%;
   height: 60px;
+  font-size: 16px;
+  line-height: 55px;
+  font-weight: 700;
+  color: #382400;
+}
+
+.popup-bg {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.9);
+  display: none;
+}
+
+.popup {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 600px;
+  background: #fff;
+  padding: 60px;
+  transform: translate(-50%, -50%);
+}
+
+.popup__close {
+  position: absolute;
+  top: 3px;
+  right: 10px;
+  cursor: pointer;
+  width: 30px;
+  height: 30px;
+}
+
+.popup__text {
+  font-size: 24px;
+  text-align: center;
+}
+
+.no-scroll {
+  overflow-y: hidden;
 }
 
 @media (max-width: 1220px) {
   .order {
-    background-image: url(../images/order_bg.png);
     background-repeat: no-repeat;
     background-position: top right -90px;
   }

@@ -222,19 +222,28 @@
                         гордимся нашим сервисом и сделаем всё, чтобы наш клиент был доволен и не остался голодный!
                     </p>
                 </div>
-                <div class="order__form">
-                    <input class="form__input" type="text" placeholder="Ваше имя">
-                    <input class="form__input" type="text" placeholder="Адрес доставки">
-                    <input class="form__input" type="text" placeholder="Телефон">
-                    <button class="order__form-btn btn">Оформить заказ</button>
+                <div class="order__box">
+                    <form class="order__form" autocomplete="off">
+                        <input class="form__input" type="text" name="name" placeholder="Ваше имя" required>
+                        <input class="form__input" type="text" name="city" placeholder="Адрес доставки" required>
+                        <input class="form__input" type="tel" name="phone" placeholder="Телефон" required>
+                        <button class="order__form-btn btn popup__open" type="submit">Оформить заказ</button>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
 
+    <div class="popup-bg">
+        <div class="popup">
+            <img class="popup__close" src="images/close.png" alt="close">
+            <p class="popup__text">“Спасибо за заказ”</p>
+        </div>
+    </div>
 
 
-    <script src="js/script.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
