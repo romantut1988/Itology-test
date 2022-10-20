@@ -618,6 +618,9 @@ input[type="tel"]::placeholder {
   .catalog__wrapper {
     margin: 0;
   }
+  .order {
+    padding-bottom: 50px;
+  }
   .order__form-btn {
     width: 100%;
   }
