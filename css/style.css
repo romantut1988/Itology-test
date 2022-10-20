@@ -142,6 +142,10 @@ body {
   color: #a46b00;
 }
 
+.menu__list-link:hover {
+  color: #ffaf18;
+}
+
 .top {
   background-image: url(../images/top-bg.png);
   background-repeat: no-repeat;
@@ -338,8 +342,40 @@ input[type="tel"]::placeholder {
   color: #382400;
 }
 
-.popup-bg {
+.menu__btn {
+  width: 40px;
+  height: 30px;
   display: none;
+}
+
+.menu__btn span {
+  position: absolute;
+  left: 0;
+  display: block;
+  height: 2px;
+  width: 100%;
+  background-color: #000;
+  top: 14px;
+}
+
+.menu__btn::after,
+.menu__btn::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 2px;
+  background-color: #000;
+}
+
+.menu__btn::before {
+  top: 0;
+}
+
+.menu__btn::after {
+  bottom: 0;
+}
+
+.popup-bg {
   position: fixed;
   width: 100%;
   height: 100%;
@@ -386,5 +422,60 @@ input[type="tel"]::placeholder {
   .order {
     background-repeat: no-repeat;
     background-position: top right -90px;
+  }
+}
+
+@media (max-width: 904px) {
+  .menu {
+    margin-left: auto;
+  }
+}
+
+@media (max-width: 648px) {
+  .header {
+    box-shadow: none;
+  }
+  .logo {
+    padding: 0;
+  }
+  .logo__img {
+    width: 100px;
+    height: 60px;
+  }
+  .menu__list {
+    padding: 0;
+  }
+  .menu__list-item {
+    margin-left: 20px;
+  }
+}
+
+@media (max-width: 524px) {
+  .header__inner {
+    display: block;
+    padding-top: 5px;
+  }
+  .menu__btn {
+    display: block;
+    position: absolute;
+    right: 10px;
+    top: 25px;
+  }
+  .menu__list {
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    background-color: #fff;
+    text-align: center;
+    transform: translateY(-300%);
+  }
+  .menu__list.menu__list--active {
+    transform: translateY(0);
+  }
+
+  .menu__list-item {
+    margin-left: 0;
+    padding: 10px;
   }
 }

@@ -1,3 +1,7 @@
+$('.menu__btn').on('click', function () {
+    $(".menu__list").toggleClass("menu__list--active")
+});
+
 // $(".popup__open").click(function (e) {
 //     e.preventDefault();
 //     $(".popup-bg").fadeIn(600);
@@ -24,7 +28,7 @@ formArr.forEach((el) => {
 form.addEventListener("input", inputHandler);
 form.addEventListener("submit", formCheck);
 
-function inputHandler({target}) {
+function inputHandler({ target }) {
     if (target.hasAttribute("data-reg")) {
         inputCheck(target);
     }
