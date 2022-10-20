@@ -418,14 +418,18 @@ input[type="tel"]::placeholder {
 }
 
 @media (max-width: 1220px) {
-  .order {
-    background-repeat: no-repeat;
-    background-position: top right -90px;
-  }
   .top {
     background-image: none;
   }
   .catalog__items {
+    justify-content: center;
+  }
+  .order {
+    background-image: none;
+    background-repeat: no-repeat;
+    background-position: top right -90px;
+  }
+  .order__inner {
     justify-content: center;
   }
 }
@@ -441,6 +445,22 @@ input[type="tel"]::placeholder {
   .catalog__title {
     margin-bottom: 70px;
   }
+  .order__content {
+    margin-right: 30px;
+  }
+  .order__content-title {
+    margin-top: 0;
+    margin-bottom: 30px;
+    font-size: 32px;
+    line-height: 38px;
+  }
+  .order__box {
+    margin-top: 0;
+  }
+  .order__content-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -455,6 +475,27 @@ input[type="tel"]::placeholder {
   .catalog__title {
     text-align: start;
     margin-bottom: 70px;
+  }
+  .order__inner {
+    flex-wrap: wrap;
+  }
+  .order__content {
+    margin-right: 0;
+    max-width: 100%;
+  }
+  .order__content-text {
+    margin-right: 0;
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+  .order__box {
+    max-width: 100%;
+  }
+  .form__input {
+    width: 100%;
+  }
+  .order__form-btn {
+    width: 242px;
   }
 }
 
@@ -533,6 +574,12 @@ input[type="tel"]::placeholder {
   .catalog__wrapper {
     box-shadow: none;
   }
+  .order__content-title {
+    margin-top: 0;
+    margin-bottom: 20px;
+    font-size: 28px;
+    line-height: 36px;
+  }
 }
 
 @media (max-width: 380px) {
@@ -570,5 +617,8 @@ input[type="tel"]::placeholder {
   }
   .catalog__wrapper {
     margin: 0;
+  }
+  .order__form-btn {
+    width: 100%;
   }
 }
