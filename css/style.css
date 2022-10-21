@@ -255,7 +255,7 @@ body {
   height: 143px;
   max-width: 100%;
 }
-.catalog__block-img .product__content {
+.product__content {
   text-align: center;
   flex-grow: 1;
 }
